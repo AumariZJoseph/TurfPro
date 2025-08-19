@@ -316,11 +316,7 @@
             observer.observe(el);
         });
 
-        // Header scroll effect - keep solid color
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            header.style.background = '#2d5a27';
-        });
+        // Header scroll effect removed; header is not fixed
 
         // JS enabled flag to allow CSS fallback
         document.documentElement.classList.remove('no-js');
