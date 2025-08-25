@@ -38,8 +38,9 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h2>Professional Landscaping Services</h2>
-            <p>Leader in commercial lawn maintenance and drainage services across St. Lucia</p>
+            <h2>Turf Pro Landscaping</h2>
+            <h3> Professional Landscaping Services & More</h3>
+            <p style="color: #e74c3c; font-size: 14px; font-style: italic;">Quality From Turf To Tree Top</p>
             <a href="#contact" class="cta-button">Schedule Consultation</a>
         </div>
     </section>
@@ -70,9 +71,10 @@
 
             <!-- Landscaping & Outdoor Maintenance Section -->
             <section id="landscaping" class="services-section fade-in">
-                <h2>🌱 Landscaping & Outdoor Maintenance</h2>
-                
-                <div class="services-grid">
+                <div class="container">
+                    <h2>🌱 Landscaping & Outdoor Maintenance</h2>
+                    
+                    <div class="services-grid">
                     <div class="service-card landscaping-card">
                         <h3 class="service-card__title" role="button" aria-expanded="false" aria-controls="svc-land-1">🌿 Planting & Lawn Care</h3>
                         <div class="service-details" id="svc-land-1">
@@ -123,9 +125,10 @@
 
             <!-- Property Services & Construction Section -->
             <section id="property" class="services-section fade-in">
-                <h2>🏗️ Property Services & Construction</h2>
-                
-                <div class="services-grid">
+                <div class="container">
+                    <h2>🏗️ Property Services & Construction</h2>
+                    
+                    <div class="services-grid">
                     <div class="service-card property-card">
                         <h3 class="service-card__title" role="button" aria-expanded="false" aria-controls="svc-prop-1">🧹 Outdoor Cleaning & Clearing</h3>
                         <div class="service-details" id="svc-prop-1">
@@ -196,53 +199,129 @@
             <section id="contact" class="section fade-in">
                 <div id="contact-us" class="contact-section-wrapper">
                     <div class="contact-container">
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15481.771266016664!2d-60.94816443046043!3d14.051008947816944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c4042b39f410033%3A0xa0071d43e94e6f34!2sCommunity%20Baptist%20Church!5e0!3m2!1sen!2sus!4v1755633113821!5m2!1sen!2sus" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        <div class="contact-info">
+                        <div class="contact-form-section">
                             <h2 class="contact-title">Get In Touch</h2>
-                            <ul class="contact-details">
-                                <li class="contact-item">
-                                    <span class="contact-icon">📍</span>
-                                    <div>
-                                        <strong>Turf Pro Landscaping</strong><br>
-                                        La Feuille PO Box MO 6639<br>
-                                        Monchy Gros Islet, St. Lucia
+                            <form class="contact-form" action="#" method="POST" enctype="multipart/form-data">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" required>
                                     </div>
-                                    <br>
-                                </li>
-                                <li class="contact-item">
-                                    <span class="contact-icon">📞</span>
-                                    <div>
-                                        <a href="tel:7587190842">758-719-0842</a> <span aria-hidden="true">·</span> 
-                                        <a href="tel:7584507229">758-450-7229</a> <span aria-hidden="true">·</span> 
-                                        <a href="tel:7584870224">758-487-0224</a>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" required>
                                     </div>
-                                </li>
-                                <li class="contact-item">
-                                    <span class="contact-icon">📧</span>
-                                    <div>
-                                        <a href="mailto:turfprolandscaping2@gmail.com">turfprolandscaping2@gmail.com</a>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number *</label>
+                                        <input type="tel" id="phone" name="phone" required>
                                     </div>
-                                </li>
-                                <li class="contact-item">
-                                    <span class="contact-icon">🌐</span>
-                                    <div>
-                                        <a href="https://www.turfprolandscapingstl.com" target="_blank" rel="noopener">www.turfprolandscapingstl.com</a>
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" name="email">
                                     </div>
-                                </li>
-                            </ul>
-                            <div class="business-hours">
-                                <h3>Business Hours</h3>
-                                <p>Monday - Friday: 9:00 AM - 4:30 PM</p>
-                                <p>Saturday: 8:00 AM - 2:00 PM</p>
-                                <p>Sunday: Closed</p>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="serviceType">Service Type *</label>
+                                    <select id="serviceType" name="serviceType" required>
+                                        <option value="">Select a service...</option>
+                                        <option value="planting-lawn-care">Planting & Lawn Care</option>
+                                        <option value="turf-sports-field">Turf/Sports Field Management</option>
+                                        <option value="tree-plant-health">Tree/Plant Health</option>
+                                        <option value="irrigation-systems">Irrigation Systems</option>
+                                        <option value="outdoor-cleaning">Outdoor Cleaning & Clearing</option>
+                                        <option value="septic-drainage">Septic & Drainage Solutions</option>
+                                        <option value="hardscaping-construction">Hardscaping & Construction</option>
+                                        <option value="irrigation-drainage-materials">Irrigation & Drainage Materials</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="address">Address *</label>
+                                    <textarea id="address" name="address" rows="2" required placeholder="Please provide your full address"></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message/Project Details *</label>
+                                    <textarea id="message" name="message" rows="4" required placeholder="Please describe your project or service needs"></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="fileUpload">File Upload (Optional)</label>
+                                    <input type="file" id="fileUpload" name="fileUpload" accept="image/*,.pdf,.doc,.docx">
+                                    <small>Upload photos, plans, or documents for quicker estimates</small>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn">Send Message</button>
+                            </form>
+                            
+                            <!-- Job Opportunities Section -->
+                            <div class="job-opportunities">
+                                <h3>🌱 Join Our Team!</h3>
+                                <p><strong>Looking for motivated individuals to join our landscaping crew!</strong></p>
+                                <div class="job-roles">
+                                    <h4>Available Positions:</h4>
+                                    <ul>
+                                        <li>Supervisor</li>
+                                        <li>Driver</li>
+                                    </ul>
+                                </div>
+                                <div class="application-method">
+                                    <p><strong>Application Method:</strong></p>
+                                    <a href="mailto:turfprolandscaping2@gmail.com?subject=Job Application - Turf Pro Landscaping" class="job-apply-btn">Send your CV</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-section">
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15481.771266016664!2d-60.94816443046043!3d14.051008947816944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c4042b39f410033%3A0xa0071d43e94e6f34!2sCommunity%20Baptist%20Church!5e0!3m2!1sen!2sus!4v1755633113821!5m2!1sen!2sus" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="contact-info">
+                                <h3>Contact Information</h3>
+                                <ul class="contact-details">
+                                    <li class="contact-item">
+                                        <span class="contact-icon">📍</span>
+                                        <div>
+                                            <strong>Turf Pro Landscaping</strong><br>
+                                            La Feuille PO Box MO 6639<br>
+                                            Monchy Gros Islet, St. Lucia
+                                        </div>
+                                    </li>
+                                    <li class="contact-item">
+                                        <span class="contact-icon">📞</span>
+                                        <div>
+                                            <a href="tel:7587190842">758-719-0842</a> <span aria-hidden="true">·</span> 
+                                            <a href="tel:7584507229">758-450-7229</a> <span aria-hidden="true">·</span> 
+                                            <a href="tel:7584870224">758-487-0224</a>
+                                        </div>
+                                    </li>
+                                    <li class="contact-item">
+                                        <span class="contact-icon">📧</span>
+                                        <div>
+                                            <a href="mailto:turfprolandscaping2@gmail.com">turfprolandscaping2@gmail.com</a>
+                                        </div>
+                                    </li>
+                                    <li class="contact-item">
+                                        <span class="contact-icon">🌐</span>
+                                        <div>
+                                            <a href="https://www.turfprolandscapingstl.com" target="_blank" rel="noopener">www.turfprolandscapingstl.com</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="business-hours">
+                                    <h4>Business Hours</h4>
+                                    <p>Monday - Friday: 9:00 AM - 4:30 PM</p>
+                                    <p>Saturday: 8:00 AM - 2:00 PM</p>
+                                    <p>Sunday: Closed</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-        
             </section>
         </div>
     </main>
@@ -278,7 +357,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Turf Pro Landscaping. All rights reserved. | Professional landscaping services in St. Lucia</p>
+                <p>&copy; 2025 Turf Pro Landscaping. All rights reserved. | Professional landscaping services in St. Lucia</p>
             </div>
         </div>
     </footer>
@@ -347,6 +426,48 @@
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
                     toggle();
+                }
+            });
+        });
+
+        // Contact form handling
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const submitBtn = this.querySelector('.submit-btn');
+                const originalText = submitBtn.textContent;
+                
+                // Show loading state
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission (replace with actual backend endpoint)
+                setTimeout(() => {
+                    // Show success message
+                    alert('Thank you for your message! We will get back to you soon.');
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Reset button
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            });
+        }
+
+        // Form validation feedback
+        const formInputs = document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value.trim()) {
+                    this.style.borderColor = '#e74c3c';
+                } else if (this.value.trim()) {
+                    this.style.borderColor = '#27ae60';
                 }
             });
         });
