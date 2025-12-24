@@ -1,0 +1,29 @@
+# robots.txt for Turf Pro Landscaping
+# https://turfprolandscapingslu.com
+
+User-agent: *
+Allow: /
+
+# Disallow access to unused/unpublished content
+Disallow: /Unnused/
+Disallow: /images/Unnused/
+
+# Allow all image files for better SEO
+Allow: /images/
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.svg
+Allow: /*.gif
+Allow: /*.webp
+
+# Allow CSS and JS files
+Allow: /*.css
+Allow: /*.js
+
+# Sitemap location
+Sitemap: https://turfprolandscapingslu.com/sitemap.xml
+
+# Crawl-delay (optional - helps prevent server overload)
+Crawl-delay: 1
+
