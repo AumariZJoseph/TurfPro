@@ -1292,22 +1292,89 @@ footer {
     }
     
     .file-sharing-container {
-        padding: 1.25rem;
+        padding: 1rem;
+        margin-top: 0.5rem;
     }
     
     .file-sharing-option {
         flex-direction: column;
         gap: 0.75rem;
         text-align: center;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
     }
     
     .file-option-icon {
         margin-bottom: 0.5rem;
     }
     
-    .email-link, .phone-number a {
-        padding: 0.6rem 0.9rem;
+    .file-option-content {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .file-option-content h4 {
         font-size: 1rem;
+        word-wrap: break-word;
+    }
+    
+    .file-option-content p {
+        font-size: 0.9rem;
+        word-wrap: break-word;
+    }
+    
+    .email-address {
+        width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .email-link {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0.6rem 0.75rem;
+        font-size: 0.9rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: center;
+        white-space: normal;
+    }
+    
+    .phone-number {
+        width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
+    }
+    
+    .phone-number a {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0.6rem 0.75rem;
+        font-size: 0.9rem;
+        text-align: center;
+        white-space: normal;
+    }
+    
+    .important-note {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0.6rem 0.75rem;
+        font-size: 0.85rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        margin-top: 0.75rem;
+        white-space: normal;
+    }
+    
+    .important-note strong {
+        display: block;
+        margin-bottom: 0.25rem;
     }
 }
 
