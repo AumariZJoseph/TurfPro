@@ -43,6 +43,19 @@ header {
     gap: 1rem;
 }
 
+a.logo {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.logo:hover {
+    text-decoration: none;
+}
+
+a.logo:visited {
+    text-decoration: none;
+}
+
 .logo img {
     height: 90px;
     width: auto;
