@@ -79,13 +79,13 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">
+                <a href="index.html" class="logo" aria-label="Turf Pro Landscaping Home">
                     <img src="New_Logo.jpg" alt="Turf Pro Landscaping - Professional Landscaping Services in St. Lucia">
                     <div>
                         <h1>Turf Pro Landscaping</h1>
                         <p>Affordable landscaping solutions</p>
                     </div>
-                </div>
+                </a>
                 <div class="header-social">
                     <a href="https://www.instagram.com/_turf_pro_landscaping_/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6zM18 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
@@ -93,9 +93,14 @@
                     <a href="https://www.facebook.com/turfprolandscapingltd" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 9H16l.5-3h-3V4.5c0-.9.3-1.5 1.5-1.5H16V0h-2c-2.4 0-4 1.6-4 4.5V6H8v3h2v9h3.5V9z"/></svg>
                     </a>
+                    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+                        <span class="menu-toggle-icon"></span>
+                        <span class="menu-toggle-icon"></span>
+                        <span class="menu-toggle-icon"></span>
+                    </button>
                 </div>
             </div>
-            <nav>
+            <nav id="main-nav" aria-expanded="false">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#about">About</a></li>
@@ -255,6 +260,27 @@
 
         // JS enabled flag to allow CSS fallback
         document.documentElement.classList.remove('no-js');
+
+        // Hamburger Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav#main-nav');
+        
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!isExpanded));
+                nav.setAttribute('aria-expanded', String(!isExpanded));
+            });
+            
+            // Close menu when clicking on a nav link (mobile behavior)
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    nav.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
 
         // Gallery image hover effects
         document.querySelectorAll('.gallery-item').forEach(item => {
