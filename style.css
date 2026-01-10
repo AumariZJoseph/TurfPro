@@ -55,6 +55,12 @@ a.logo:active {
     color: inherit !important;
 }
 
+a.logo h1,
+a.logo p,
+a.logo div {
+    text-decoration: none !important;
+}
+
 .logo img {
     height: 90px;
     width: auto;
