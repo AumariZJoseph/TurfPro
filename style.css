@@ -44,7 +44,15 @@ header {
 }
 
 a.logo {
-    text-decoration: none;
+    text-decoration: none !important;
+}
+
+a.logo:link,
+a.logo:visited,
+a.logo:hover,
+a.logo:active {
+    text-decoration: none !important;
+    color: inherit !important;
 }
 
 .logo img {
