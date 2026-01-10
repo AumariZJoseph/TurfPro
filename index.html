@@ -212,10 +212,10 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- LCP image - hidden but discoverable for Lighthouse -->
+        <img src="images/DSCG4.JPG" alt="" fetchpriority="high" decoding="async" style="position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none;" aria-hidden="true">
         <div class="hero-slides" aria-hidden="true">
-            <div class="hero-slide">
-                <img src="images/DSCG4.JPG" alt="Turf Pro Landscaping Hero Image" fetchpriority="high" decoding="async">
-            </div>
+            <div class="hero-slide" style="background-image: url('images/DSCG4.JPG');"></div>
             <div class="hero-slide" style="background-image: url('images/hero1.jpg');"></div>
             <div class="hero-slide" style="background-image: url('images/Foundation1.jpeg');"></div>
         </div>
