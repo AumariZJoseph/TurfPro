@@ -1084,6 +1084,12 @@ footer {
         font-size: 1.2rem;
         margin-bottom: 2rem;
     }
+
+    /* Ensure gallery content is visible on mobile (fade-in relies on JS; avoid invisible content if observer doesn't fire) */
+    .gallery-section.fade-in {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 /* === Contact Hub (Unified Card) === */

@@ -166,12 +166,12 @@
                         <figcaption>Aerial view of Darren Sammy Cricket Grounds — Turf Pro Landscaping’s expert turf management ensures consistent field quality across Saint Lucia’s premier sporting venue.</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="images/sports-field-turf1.jpeg" alt="Close-up of Vigie Sports Field turf in Saint Lucia maintained by Turf Pro Landscaping for resilient playing surfaces.">
-                        <figcaption>Close‑up of Vigie Sports Field turf in Saint Lucia — Turf Pro Landscaping delivers expert lawn care and turf management for resilient, professional‑grade playing surfaces.</figcaption>
+                        <img src="images/sports-field-turf1.jpeg" alt="Close-up of Vigie Sports Field turf in Saint Lucia chemical application, lawn care, and turf management maintained by Turf Pro Landscaping for resilient playing surfaces.">
+                        <figcaption>Close‑up of Vigie Sports Field turf in Saint Lucia — Turf Pro Landscaping delivers expert chemical application, lawn care, and turf management for resilient, professional‑grade playing surfaces.</figcaption>
                     </figure>
                     <figure class="gallery-item">
-                        <img src="images/sports-field-turf2.jpeg" alt="Active turf maintenance at Vigie Sports Field in Saint Lucia with Turf Pro Landscaping using specialized equipment for consistent field quality.">
-                        <figcaption>Active turf maintenance at Vigie Sports Field — Turf Pro Landscaping uses specialized equipment to ensure healthy grass and consistent field quality for sports performance.</figcaption>
+                        <img src="images/sports-field-turf2.jpeg" alt="Active turf maintenance at Vigie Sports Field in Saint Lucia chemical application with Turf Pro Landscaping using specialized equipment for consistent field quality.">
+                        <figcaption>Active turf maintenance at Vigie Sports Field — Turf Pro Landscaping uses specialized chemical application and equipment to ensure healthy grass and consistent field quality for sports performance.</figcaption>
                     </figure>
                     <figure class="gallery-item">
                         <img src="images/CroqCourt.png" alt="Croquet court installation and turf care in Saint Lucia by Turf Pro Landscaping with players enjoying recreational outdoor space.">
@@ -260,8 +260,8 @@
 
         // Fade-in animation on scroll
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.05,
+            rootMargin: '0px 0px 0px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -275,6 +275,17 @@
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
+
+        // Fallback: on narrow viewports (mobile), show gallery immediately so content is never stuck hidden
+        function showFadeInInViewport() {
+            if (window.innerWidth <= 768) {
+                document.querySelectorAll('.gallery-section.fade-in').forEach(el => {
+                    el.classList.add('visible');
+                });
+            }
+        }
+        showFadeInInViewport();
+        window.addEventListener('load', showFadeInInViewport);
 
         // JS enabled flag to allow CSS fallback
         document.documentElement.classList.remove('no-js');
