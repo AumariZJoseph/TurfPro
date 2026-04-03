@@ -442,6 +442,7 @@ main {
              box-shadow: 0 10px 24px rgba(0,0,0,0.07);
              transition: transform 260ms ease, box-shadow 260ms ease, filter 260ms ease;
              will-change: transform, filter;
+             contain: layout paint;
          }
 
         /* Gradient backgrounds by category */
